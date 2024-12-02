@@ -1,0 +1,857 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quintessential&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* css VAriables */
+
+:root {
+    --font-size-xs: 0.75rem;
+    --font-size-sm: 0.875rem;
+    --font-size-md: 1.4rem;
+    --font-size-lg: 2rem;
+    --font-size-xl: 2.5rem;
+    --color-2: #212421;
+    --color-1-lightest: hsla(35, 87%, 96%, 1);
+    --color-1-lighter: rgb(255, 193, 107);
+    --color-1-light: rgb(241, 164, 57);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    font-style: normal;
+    background: var(--color-2) !important;
+    color: var(--color-1-lightest) !important;
+}
+
+/* nav Styles */
+nav {
+    position: relative;
+    bottom: 100px;
+    animation: bottom 1s 1 forwards;
+}
+
+@keyframes bottom {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        bottom: 0px;
+        opacity: 1;
+    }
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--color-1-light);
+    position: relative;
+}
+
+nav a:hover {
+    color: var(--color-1-lightest) !important;
+}
+
+nav a::after {
+    content: "";
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: -2.5px;
+    width: 0;
+    background-color: var(--color-1-light);
+    height: 2px;
+    transition: width 0.5s linear;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* Home PAge */
+
+#home {
+    color: var(--color-1-lightest) !important;
+    font-family: "Montserrat", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    height: 100vh;
+
+}
+
+header h5 {
+    font-size: var(--font-size-md);
+    position: relative;
+    right: 200px;
+    animation: right 1.5s 1 forwards;
+}
+
+@keyframes right {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        right: 0px;
+        opacity: 1;
+    }
+}
+
+header h2 {
+    font-size: var(--font-size-xl);
+    position: relative;
+    left: 200px;
+    animation: left 1.5s 1 forwards;
+}
+
+@keyframes left {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        left: 0px;
+        opacity: 1;
+    }
+}
+
+header h2>span {
+    color: transparent;
+    background-clip: text;
+    animation: blink 3s linear infinite forwards;
+}
+
+button:hover {
+    background-color: var(--color-1-lighter) !important;
+    border: 0 !important;
+    color: var(--color-1-lightest) !important;
+    transition: background-color 0.5s linear;
+}
+
+#home {
+    scale: 1;
+    animation: exit linear forwards;
+    animation-timeline: view();
+    animation-range: exit;
+    transition: .5s;
+}
+
+@keyframes exit {
+    to {
+        scale: .2;
+        opacity: 0;
+    }
+}
+
+
+
+/* About section */
+#about {
+    position: relative;
+}
+
+@keyframes slow {
+    to {
+        scale: 1;
+        opacity: 0;
+    }
+}
+
+#about h3,
+p {
+    position: relative;
+    z-index: 999;
+    opacity: 0.8;
+    top: -25px;
+}
+
+#about h3,
+h4 {
+    font-size: var(--font-size-xl);
+
+}
+
+#about h3,
+h4:hover {
+    color: var(--color-1-lighter);
+
+}
+
+#about p {
+    font-size: var(--font-size-md);
+    line-height: 1.7;
+}
+
+.part-img {
+    height: 300px;
+    width: 400px;
+    opacity: 0.5;
+    position: absolute;
+    left: -300px;
+    top: 0;
+    z-index: 0;
+    animation: moveup 1s infinite ease-in-out;
+}
+
+@keyframes moveup {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-100px);
+    }
+}
+
+.head {
+    border-left: 1px solid grey;
+    scale: .3;
+    opacity: 0;
+    animation: slow linear forwards;
+    animation-timeline: view();
+    animation-range: entry;
+    transition: .5s;
+}
+
+@keyframes slow {
+    to {
+        scale: 1;
+        opacity: 1;
+    }
+}
+
+.para {
+    scale: .3;
+    opacity: 0;
+    animation: slow linear forwards;
+    animation-timeline: view();
+    animation-range: entry;
+    transition: animation 1s;
+}
+
+@keyframes slow {
+    to {
+        scale: 1;
+        opacity: 1;
+    }
+}
+
+.part-img1 {
+    height: 300px;
+    width: 400px;
+    opacity: 0.5;
+    position: absolute;
+    left: -300px;
+    top: 0;
+    z-index: 0;
+    animation: movedown 1s infinite ease-in-out;
+    transition: animation 1s;
+}
+
+@keyframes movedown {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(100px);
+    }
+}
+
+.skill-set {
+    scale: 1;
+    animation: exit linear forwards;
+    animation-timeline: view();
+    animation-range: exit;
+    transition: .5s;
+}
+
+@keyframes exit {
+    to {
+        scale: .2;
+        opacity: 0;
+    }
+}
+
+/* skills Animation */
+
+.skills {
+    display: inline-block;
+    position: relative;
+}
+
+.skills::before {
+    content: "0";
+    position: absolute;
+    font-size: 2rem;
+    top: -130%;
+    left: 13%;
+    color: var(--color-1-lighter);
+}
+
+.skill-html:before {
+    animation: counting-html 2s steps(10) 1 forwards;
+}
+
+@keyframes counting-html {
+    from {
+        content: "0%";
+    }
+
+    5% {
+        content: "5%";
+    }
+
+    10% {
+        content: "13%";
+    }
+
+    15% {
+        content: "24%";
+    }
+
+    20% {
+        content: "31%";
+    }
+
+    25% {
+        content: "45%";
+    }
+
+    30% {
+        content: "52%";
+    }
+
+    35% {
+        content: "63%";
+    }
+
+    45% {
+        content: "70%";
+    }
+
+    45% {
+        content: "77%";
+    }
+
+    55% {
+        content: "82";
+    }
+
+    65% {
+        content: "87%";
+    }
+
+    75% {
+        content: "91%";
+    }
+
+    85% {
+        content: "93%";
+    }
+
+    90% {
+        content: "72%";
+    }
+
+    95% {
+        content: "74%";
+    }
+
+    to {
+        content: "75%";
+    }
+}
+
+.skill-bootstrap:before {
+    animation: counting-bootstrap 2s steps(10) 1 forwards;
+}
+
+@keyframes counting-bootstrap {
+    from {
+        content: "0%";
+    }
+
+    from {
+        content: "0%";
+    }
+
+    5% {
+        content: "5%";
+    }
+
+    10% {
+        content: "13%";
+    }
+
+    15% {
+        content: "24%";
+    }
+
+    20% {
+        content: "31%";
+    }
+
+    25% {
+        content: "45%";
+    }
+
+    30% {
+        content: "52%";
+    }
+
+    35% {
+        content: "63%";
+    }
+
+    45% {
+        content: "70%";
+    }
+
+    45% {
+        content: "77%";
+    }
+
+    55% {
+        content: "82";
+    }
+
+    65% {
+        content: "87%";
+    }
+
+    75% {
+        content: "91%";
+    }
+
+    85% {
+        content: "93%";
+    }
+
+    90% {
+        content: "97%";
+    }
+
+    95% {
+        content: "53%";
+    }
+
+    to {
+        content: "54%";
+    }
+
+    to {
+        content: "54%";
+    }
+}
+
+.skill-javascript:before {
+    animation: counting-js 2s steps(10) 1 forwards;
+}
+
+@keyframes counting-js {
+    from {
+        content: "0%";
+    }
+
+    5% {
+        content: "5%";
+    }
+
+    10% {
+        content: "13%";
+    }
+
+    15% {
+        content: "24%";
+    }
+
+    20% {
+        content: "31%";
+    }
+
+    25% {
+        content: "45%";
+    }
+
+    30% {
+        content: "52%";
+    }
+
+    35% {
+        content: "63%";
+    }
+
+    45% {
+        content: "70%";
+    }
+
+    45% {
+        content: "77%";
+    }
+
+    55% {
+        content: "82";
+    }
+
+    65% {
+        content: "87%";
+    }
+
+    75% {
+        content: "91%";
+    }
+
+    85% {
+        content: "93%";
+    }
+
+    90% {
+        content: "95%";
+    }
+
+    95% {
+        content: "97%";
+    }
+
+    to {
+        content: "10%";
+    }
+}
+
+.skill-python:before {
+    animation: counting-py 2s steps(10) 1 forwards;
+}
+
+@keyframes counting-py {
+    from {
+        content: "0%";
+    }
+
+    5% {
+        content: "5%";
+    }
+
+    10% {
+        content: "13%";
+    }
+
+    15% {
+        content: "24%";
+    }
+
+    20% {
+        content: "31%";
+    }
+
+    25% {
+        content: "45%";
+    }
+
+    30% {
+        content: "52%";
+    }
+
+    35% {
+        content: "63%";
+    }
+
+    45% {
+        content: "70%";
+    }
+
+    45% {
+        content: "77%";
+    }
+
+    55% {
+        content: "82";
+    }
+
+    65% {
+        content: "87%";
+    }
+
+    75% {
+        content: "91%";
+    }
+
+    85% {
+        content: "93%";
+    }
+
+    90% {
+        content: "95%";
+    }
+
+    95% {
+        content: "97%";
+    }
+
+    to {
+        content: "10%";
+    }
+}
+
+.skillset {
+    position: relative;
+}
+
+/* Projects  */
+.projects h3 {
+    font-size: var(--font-size-xl);
+    position: relative;
+    z-index: 999;
+    opacity: 0.8;
+    top: -25px;
+}
+
+.projects h4:hover {
+    color: var(--color-1-lighter) !important;
+}
+
+.projects a {
+    text-decoration: none;
+    color: var(--color-1-lightest);
+}
+
+.projects {
+    border-left: 1px solid grey;
+    position: relative;
+    scale: .3;
+    opacity: 0;
+    animation: slow ease-in-out forwards;
+    animation-timeline: view();
+    animation-range: entry;
+    transition: animation 6s;
+    margin: 100px;
+}
+
+@keyframes slow {
+    to {
+        scale: 1;
+        opacity: 1;
+    }
+}
+
+.point {
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    left: -11px;
+    top: -10px;
+    background-color: grey;
+    border-radius: 50%;
+    z-index: 999;
+    animation: blink 4s linear infinite forwards;
+}
+
+@keyframes blink {
+    0% {}
+
+    50% {
+        background-color: var(--color-1-lighter);
+    }
+
+    100% {
+        background-color: none;
+    }
+}
+
+.project1:after {
+    content: "";
+    background-color: rgba(214, 167, 80, 0.792);
+    height: 50rem;
+    width: 50rem;
+    animation: zoom 2s 1 forwards linear;
+}
+
+
+/* Services */
+#services {
+    border-left: 1px solid grey;
+    position: relative;
+    scale: .3;
+    opacity: 0;
+    animation: slow linear forwards;
+    animation-timeline: view();
+    animation-range: entry;
+    transition: animation 1s;
+}
+
+@keyframes slow {
+    to {
+        scale: 1;
+        opacity: 1;
+    }
+}
+
+#services i {
+    font-size: 30px;
+}
+
+#services>h3 {
+    font-size: var(--font-size-xl);
+    position: relative;
+    z-index: 999;
+    opacity: 0.8;
+    top: -25px;
+}
+
+#services h3:hover {
+    color: var(--color-1-lighter) !important;
+}
+
+#services i{
+    animation: blink-2 2s linear infinite forwards ;
+    transition: all 1s;
+}
+@keyframes blink-2{
+    0%{opacity: 1;}
+    50%{color: var(--color-1-lighter);}
+    100%{opacity: 1;}
+}
+
+
+/*#CONTACT */
+#contact>h3 ::after {
+    content: "";
+    height: 1px;
+    background-color: var(--color-1-lighter);
+    width: 100%;
+}
+
+#contact>h3:hover {
+    color: var(--color-1-lighter) !important;
+
+}
+
+#contact input {
+    background: transparent !important;
+    border: 0;
+    border-bottom: 1.4px solid grey;
+    color: var(--color-1-lightest) !important;
+    animation: input-width 2s linear 1 forwards;
+}
+
+@keyframes input-width {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+#contact input::placeholder {
+    color: var(--color-1-lightest) !important;
+    opacity: 0!important;
+}
+
+#contact textarea {
+    background: transparent !important;
+    border: 0;
+    border-bottom: 1.4px solid grey;
+    color: var(--color-1-lightest) !important;
+    animation: input-width 2s linear 1 forwards;
+}
+
+#contact textarea::placeholder {
+    color: var(--color-1-lightest) !important;
+}
+
+.btn1 {
+    padding: 10px;
+    color: aliceblue;
+    background-color: var(--color-2);
+    border: 1px solid grey;
+}
+
+/* foooter */
+footer {
+    height: 30vh;
+    text-align: center;
+    display: flex;
+    align-items: end;
+}
+
+footer a {
+    font-size: var(--font-size-sm);
+    color: var(--color-1-lightest);
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: var(--color-1-lighter);
+}
+
+/* responsive  */
+
+
+/* Small Screen */
+@media only screen and (max-width:700px) {
+    header h2 {
+        font-size: var(--font-size-lg);
+    }
+
+    header h5 {
+        font-size: var(--font-size-md);
+    }
+
+}
+
+
+@media only screen and (max-width:1000px) {
+    .skill-javascript {
+        position: relative;
+        top: 30px;
+    }
+
+    .skill-python {
+        position: relative;
+        top: 34px;
+    }
+}
+
+@media only screen and (max-width:1000px) {
+    .profile {
+        display: none;
+    }
+
+    #about {
+        margin-top: -50px;
+    }
+}
+
+@media only screen and (max-width:550px) {
+    #about {
+        margin-top: -50px;
+    }
+
+    .head p {
+        display: none;
+    }
+
+}
+
+@media only screen and (max-width:550px) {
+
+    footer a{
+        display: none;
+    }
+}

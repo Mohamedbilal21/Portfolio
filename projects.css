@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quintessential&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* css VAriables */
+
+:root {
+    --font-size-xs: 0.75rem; 
+    --font-size-sm: 0.875rem;
+    --font-size-md: 1.4rem; 
+    --font-size-lg: 2rem; 
+    --font-size-xl: 2.5rem;
+    --color-2: #212421;
+    --color-1-lightest: hsla(35, 87%, 96%, 1);
+    --color-1-lighter: rgb(255, 193, 107);
+    --color-1-light:  rgb(241, 164, 57);
+}
+html {
+    scroll-behavior: smooth;
+  }
+  
+
+body{
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    font-style: normal;
+    background: var(--color-2) !important;
+    color: var(--color-1-lightest)!important;
+    overflow: hidden;
+}
+
+
+/*#Projects  */
+#projects h3{
+    font-size: var(--font-size-xl);
+    position: relative;
+    z-index: 999;
+    opacity: 0.8;
+    top: -25px;  
+}
+#projects h4:hover{
+    color: var(--color-1-lighter)!important;
+}
+#projects a{
+    text-decoration: none;
+    color: var(--color-1-lightest);
+}
+#projects{
+    border-left:1px solid grey ;
+    position: relative;
+    scale: .3;
+    opacity: 0;
+    animation: slow ease-in-out forwards;
+    animation-timeline: view() ;
+    animation-range: entry;
+    transition:animation 6s;
+}
+@keyframes slow{
+    to{
+        scale: 1;
+        opacity: 1;
+    }
+}
+.point{
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    left: -11px;
+    top: -10px;
+    background-color: grey;
+    border-radius: 50%;
+    z-index: 999;
+    animation: blink 4s linear infinite forwards;
+}
+@keyframes blink{
+    0%{}
+    50%{background-color: var(--color-1-lighter);}
+    100%{background-color: none;}
+}
+.project1:after{
+    content: "";
+    background-color: rgba(214, 167, 80, 0.792);
+    height: 50rem;
+    width: 50rem;
+    animation: zoom 2s 1 forwards linear;   
+}
+.project2{
+
+}
+.project3{
+
+}
