@@ -165,8 +165,7 @@ button:hover {
     }
 }
 
-#about h3,
-p {
+#about h3{
     position: relative;
     z-index: 999;
     opacity: 0.8;
@@ -269,353 +268,15 @@ h4:hover {
         transform: translateY(100px);
     }
 }
-
-.skill-set {
-    scale: 1;
-    animation: exit linear forwards;
-    animation-timeline: view();
-    animation-range: exit;
-    transition: .5s;
+.skills{
+    border-radius: 6px;
+    box-shadow: 1px 1px 10px 1px #3d413d;
+    padding: 20px;
+}
+.skills i{
+    font-size: 40px;
 }
 
-@keyframes exit {
-    to {
-        scale: .2;
-        opacity: 0;
-    }
-}
-
-/* skills Animation */
-
-.skills {
-    display: inline-block;
-    position: relative;
-}
-
-.skills::before {
-    content: "0";
-    position: absolute;
-    font-size: 2rem;
-    top: -130%;
-    left: 13%;
-    color: var(--color-1-lighter);
-}
-
-.skill-html:before {
-    animation: counting-html 2s steps(10) 1 forwards;
-    animation-timeline: view();
-    animation-range: entry;
-}
-
-@keyframes counting-html {
-    from {
-        content: "0%";
-    }
-
-    5% {
-        content: "5%";
-    }
-
-    10% {
-        content: "13%";
-    }
-
-    15% {
-        content: "24%";
-    }
-
-    20% {
-        content: "31%";
-    }
-
-    25% {
-        content: "45%";
-    }
-
-    30% {
-        content: "52%";
-    }
-
-    35% {
-        content: "63%";
-    }
-
-    45% {
-        content: "70%";
-    }
-
-    45% {
-        content: "77%";
-    }
-
-    55% {
-        content: "82";
-    }
-
-    65% {
-        content: "87%";
-    }
-
-    75% {
-        content: "91%";
-    }
-
-    85% {
-        content: "93%";
-    }
-
-    90% {
-        content: "72%";
-    }
-
-    95% {
-        content: "74%";
-    }
-
-    to {
-        content: "75%";
-    }
-}
-
-.skill-bootstrap:before {
-    animation: counting-bootstrap 2s steps(10) 1 forwards;
-    animation-timeline: view();
-    animation-range: entry;
-}
-
-@keyframes counting-bootstrap {
-    from {
-        content: "0%";
-    }
-
-    from {
-        content: "0%";
-    }
-
-    5% {
-        content: "5%";
-    }
-
-    10% {
-        content: "13%";
-    }
-
-    15% {
-        content: "24%";
-    }
-
-    20% {
-        content: "31%";
-    }
-
-    25% {
-        content: "45%";
-    }
-
-    30% {
-        content: "52%";
-    }
-
-    35% {
-        content: "63%";
-    }
-
-    45% {
-        content: "70%";
-    }
-
-    45% {
-        content: "77%";
-    }
-
-    55% {
-        content: "82";
-    }
-
-    65% {
-        content: "87%";
-    }
-
-    75% {
-        content: "91%";
-    }
-
-    85% {
-        content: "93%";
-    }
-
-    90% {
-        content: "97%";
-    }
-
-    95% {
-        content: "53%";
-    }
-
-    to {
-        content: "54%";
-    }
-
-    to {
-        content: "54%";
-    }
-}
-
-.skill-javascript:before {
-    animation: counting-js 2s steps(10) 1 forwards;
-    animation-timeline: view();
-    animation-range: entry;
-}
-
-@keyframes counting-js {
-    from {
-        content: "0%";
-    }
-
-    5% {
-        content: "5%";
-    }
-
-    10% {
-        content: "13%";
-    }
-
-    15% {
-        content: "24%";
-    }
-
-    20% {
-        content: "31%";
-    }
-
-    25% {
-        content: "45%";
-    }
-
-    30% {
-        content: "52%";
-    }
-
-    35% {
-        content: "63%";
-    }
-
-    45% {
-        content: "70%";
-    }
-
-    45% {
-        content: "77%";
-    }
-
-    55% {
-        content: "82";
-    }
-
-    65% {
-        content: "87%";
-    }
-
-    75% {
-        content: "91%";
-    }
-
-    85% {
-        content: "93%";
-    }
-
-    90% {
-        content: "95%";
-    }
-
-    95% {
-        content: "97%";
-    }
-
-    to {
-        content: "10%";
-    }
-}
-
-.skill-python:before {
-    animation: counting-py 2s steps(10) 1 forwards;
-    animation-timeline: view();
-    animation-range: entry;
-}
-
-@keyframes counting-py {
-    from {
-        content: "0%";
-    }
-
-    5% {
-        content: "5%";
-    }
-
-    10% {
-        content: "13%";
-    }
-
-    15% {
-        content: "24%";
-    }
-
-    20% {
-        content: "31%";
-    }
-
-    25% {
-        content: "45%";
-    }
-
-    30% {
-        content: "52%";
-    }
-
-    35% {
-        content: "63%";
-    }
-
-    45% {
-        content: "70%";
-    }
-
-    45% {
-        content: "77%";
-    }
-
-    55% {
-        content: "82";
-    }
-
-    65% {
-        content: "87%";
-    }
-
-    75% {
-        content: "91%";
-    }
-
-    85% {
-        content: "93%";
-    }
-
-    90% {
-        content: "95%";
-    }
-
-    95% {
-        content: "97%";
-    }
-
-    to {
-        content: "10%";
-    }
-}
-
-.skillset {
-    position: relative;
-}
 
 /* Projects  */
 .projects h3 {
@@ -808,8 +469,17 @@ footer a:hover {
 
 /* responsive  */
 
+@media only screen and (max-width:1000px) {
+    .profile {
+        display: none;
+    }
 
-/* Small Screen */
+    #about {
+        margin-top: -50px;
+    }
+}
+
+
 @media only screen and (max-width:700px) {
     header h2 {
         font-size: var(--font-size-lg);
@@ -822,28 +492,6 @@ footer a:hover {
 }
 
 
-@media only screen and (max-width:1000px) {
-    .skill-javascript {
-        position: relative;
-        top: 30px;
-    }
-
-    .skill-python {
-        position: relative;
-        top: 34px;
-    }
-}
-
-@media only screen and (max-width:1000px) {
-    .profile {
-        display: none;
-    }
-
-    #about {
-        margin-top: -50px;
-    }
-}
-
 @media only screen and (max-width:550px) {
     #about {
         margin-top: -50px;
@@ -852,12 +500,9 @@ footer a:hover {
     .head p {
         display: none;
     }
-
-}
-
-@media only screen and (max-width:550px) {
-
     footer a{
         display: none;
     }
+
 }
+
