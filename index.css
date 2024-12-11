@@ -277,6 +277,9 @@ h4:hover {
     font-size: 40px;
 }
 
+.skills:hover{
+    background-color:rgb(255, 154, 12);
+}
 
 /* Projects  */
 .projects h3 {
