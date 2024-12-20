@@ -187,6 +187,8 @@ h4:hover {
 #about p {
     font-size: var(--font-size-md);
     line-height: 1.7;
+    position: relative;
+    z-index: 999;
 }
 
 .part-img {
@@ -268,17 +270,30 @@ h4:hover {
         transform: translateY(100px);
     }
 }
-.skills{
+.skills {
     border-radius: 6px;
+    height: 132px;
     box-shadow: 1px 1px 10px 1px #3d413d;
     padding: 20px;
 }
+
 .skills i{
     font-size: 40px;
 }
 
-.skills:hover{
-    background-color:rgb(255, 172, 57);
+.skills:hover {
+    animation: bg-move 1s 1 ease-in-out forwards;
+}
+
+@keyframes bg-move {
+    0%{
+      height: 0;
+        
+    }
+    100%{
+        background-color:rgb(255, 172, 57);
+        height: 132px;
+    }
 }
 
 /* Projects  */
