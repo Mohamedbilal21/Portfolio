@@ -21,6 +21,7 @@
 }
 
 html {
+    /* Adjust this value based on your header height */
     scroll-behavior: smooth;
 }
 
@@ -49,6 +50,10 @@ nav {
         bottom: 0px;
         opacity: 1;
     }
+}
+
+.nav-brand{
+    font-size: 27px!important;
 }
 
 nav a {
@@ -85,6 +90,26 @@ nav a:hover::after {
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
+}
+
+#name{
+    position: relative;
+}
+
+#name::after{
+    content: "";
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: -2.5px;
+    width: 0;
+    background-color: var(--color-1-light);
+    height: 2px;
+    transition: width 0.5s linear;
+}
+
+#name:hover::after {
+    width: 100%;
 }
 
 header h5 {
@@ -155,6 +180,7 @@ button:hover {
 
 /* About section */
 #about {
+    scroll-margin-bottom: 100px; 
     position: relative;
 }
 
@@ -272,7 +298,8 @@ h4:hover {
 }
 .skills {
     border-radius: 6px;
-    height: 132px;
+    height: 130px;
+    width: 100px;
     box-shadow: 1px 1px 10px 1px #3d413d;
     padding: 20px;
 }
@@ -282,23 +309,14 @@ h4:hover {
 }
 
 .skills:hover {
-    animation: bg-move 1s 1 ease-in-out forwards;
-}
-
-@keyframes bg-move {
-    0%{
-      height: 0;
-        
-    }
-    100%{
-        background-color:rgb(255, 172, 57);
-        height: 132px;
-    }
+    background-color: var(--color-1-light);
+    
 }
 
 /* Projects  */
 .projects h3 {
     font-size: var(--font-size-xl);
+    color: var(--color-1-light);
     position: relative;
     z-index: 999;
     opacity: 0.8;
@@ -368,6 +386,7 @@ h4:hover {
 
 /* Services */
 #services {
+    scroll-margin-top: 160px; 
     border-left: 1px solid grey;
     position: relative;
     scale: .3;
@@ -391,15 +410,13 @@ h4:hover {
 
 #services>h3 {
     font-size: var(--font-size-xl);
+    color: var(--color-1-light);
     position: relative;
     z-index: 999;
     opacity: 0.8;
     top: -25px;
 }
 
-#services h3:hover {
-    color: var(--color-1-lighter) !important;
-}
 
 #services i{
     animation: blink-2 2s linear infinite forwards ;
