@@ -538,6 +538,17 @@ footer a:hover {
     footer a{
         display: none;
     }
+    .skills {
+        border-radius: 6px;
+        height: 130px;
+        
+        box-shadow: 1px 1px 10px 1px #3d413d;
+        padding: 20px;
+    }
+    
+    .skills i{
+        font-size: 40px;
+    }
 
 }
 
