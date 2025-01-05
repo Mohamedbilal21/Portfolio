@@ -471,6 +471,7 @@ h4:hover {
     border-bottom: 1.4px solid grey;
     color: var(--color-1-lightest) !important;
     animation: input-width 2s linear 1 forwards;
+    resize: none!important;
 }
 
 #contact textarea::placeholder {
@@ -492,14 +493,31 @@ footer {
     align-items: end;
 }
 
+.home-nav{
+    position: fixed;
+
+}
 footer a {
-    font-size: var(--font-size-sm);
+    font-size: 20px!important;
     color: var(--color-1-lightest);
     text-decoration: none;
 }
 
 footer a:hover {
     color: var(--color-1-lighter);
+}
+footer i{
+    position: fixed;
+    bottom: 100px;
+    right: 70px;
+    border-radius: 50%;
+    border: 2px solid var(--color-1-light);
+    padding: 15px;
+}
+
+footer i:hover{
+    background-color: var(--color-1-light);
+    color: var(--color-1-lightest);
 }
 
 /* responsive  */
@@ -539,6 +557,9 @@ footer a:hover {
     .skill-set{
         display: flex;
         justify-content: space-evenly;
+    }
+    footer a{
+        font-size: var(--font-size-sm);
     }
 
 }
